@@ -2,6 +2,7 @@
 
 Una aplicación web interactiva desarrollada con **HTML5, CSS3 y JavaScript vanilla** que consume la [PokéAPI](https://pokeapi.co/) para explorar información detallada de Pokémon y guardarlos en una colección personalizada utilizando `localStorage`.
 
+Link: https://catheleen94h.github.io/pokedex/
 ---
 
 ## Características Principales
