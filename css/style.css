@@ -1,0 +1,467 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #5d78a5 0%, #021933 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 950px;
+    gap: 25px;
+}
+
+.encabezado-pagina {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+#logo img {
+    height: 70px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+}
+
+.titulo-encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+#titulo {
+    color: #f8fafc;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#subtitulo {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Barra de búsqueda llamativa con efecto neón suave */
+.barra-busqueda {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    gap: 12px;
+}
+
+#barra-b {
+    flex: 1;
+    padding: 0 22px;
+    border-radius: 14px;
+    background-color: rgba(251, 251, 252, 0.8);
+    border: 2px solid rgba(56, 189, 248, 0.3);
+    color: rgb(28, 2, 255);
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#barra-b:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+#barra-b::placeholder {
+    color: #64748b;
+}
+
+#btn-buscar {
+    padding: 0 32px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    transition: all 0.2s ease;
+}
+
+#btn-buscar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.6);
+}
+
+#btn-buscar:active {
+    transform: scale(0.97);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#mensaje {
+    color: #f43f5e;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+
+
+
+/* Sección inferior de Pokémon guardados (Panel Glassmorphism) */
+#pokemones-guardados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    align-items: center;
+}
+
+.tarjeta-guardada {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 12px;
+    padding: 10px 14px;
+    position: relative;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.tarjeta-guardada:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.6);
+}
+
+.img-contenedor-guardado {
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-contenedor-guardado img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.info-guardado {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-guardado {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.numero-guardado {
+    color: #38bdf8;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.btn-eliminar {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0 6px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.btn-eliminar:hover {
+    color: #f43f5e;
+}
+
+.sin-guardados {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin: 0;
+    font-style: italic;
+}
+
+
+
+
+/* Contenedor principal de la tarjeta TCG */
+.tarjeta-tcg {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 460px;
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
+    border: 4px solid #f8fafc;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-tcg:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Cabecera de la carta (Nombre y PS) */
+.tarjeta-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #fef08a 0%, #fde047 100%);
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ca8a04;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tipo-etiqueta {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #713f12;
+    text-transform: uppercase;
+}
+
+.pokemon-nombre {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-transform: capitalize;
+}
+
+.pokemon-hp {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #b91c1c;
+    font-weight: 900;
+}
+
+.hp-texto {
+    font-size: 0.7rem;
+}
+
+.hp-numero {
+    font-size: 1.2rem;
+}
+
+/* Marco interior blanco para la ilustración */
+.tarjeta-marco-imagen {
+    background: #ffffff;
+    border: 3px solid #94a3b8;
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.tarjeta-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Barra de datos técnicos debajo de la imagen */
+.tarjeta-info-tecnica {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    color: #475569;
+    text-align: center;
+    border: 1px solid #cbd5e1;
+}
+
+/* Cuerpo inferior de la carta */
+.tarjeta-cuerpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background: rgba(241, 245, 249, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    gap: 8px;
+}
+
+.tipos {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pokemon-tipo {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 15px;
+    text-transform: capitalize;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#btn-guardar {
+    height: 36px;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    border: 1px solid #3b82f6;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+}
+
+#btn-guardar:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    transform: scale(1.01);
+}
+
+#btn-guardar:active {
+    transform: scale(0.97);
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================== */
+
+/* 1. Pantallas medianas (Tabletas y laptops pequeñas <= 1024px) */
+@media (max-width: 1024px) {
+    .contenedor-principal {
+        width: 100%;
+        max-width: 900px;
+        padding: 0 20px;
+    }
+}
+
+/* 2. Pantallas pequeñas (Tabletas verticales y teléfonos grandes <= 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .contenedor-principal {
+        gap: 20px;
+    }
+
+    /* Reorganizar el encabezado en vertical */
+    .encabezado-pagina {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .titulo-encabezado {
+        align-items: center;
+    }
+
+    #titulo {
+        font-size: 22px;
+    }
+
+    #subtitulo {
+        font-size: 12px;
+    }
+
+    #logo img {
+        height: 55px;
+    }
+
+    /* Reorganizar la barra de búsqueda */
+    .barra-busqueda {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    #barra-b {
+        height: 48px;
+        width: 100%;
+    }
+
+    #btn-buscar {
+        height: 48px;
+        width: 100%;
+    }
+
+    /* Centrar el mensaje de error o aviso */
+    #mensaje {
+        text-align: center;
+    }
+
+    /* Centrar la lista de Pokémon guardados en móviles */
+    #pokemones-guardados {
+        justify-content: center;
+    }
+
+    .tarjeta-guardada {
+        width: 100%; /* Las tarjetas guardadas ocupan todo el ancho disponible */
+        max-width: 280px;
+    }
+}
+
+/* 3. Pantallas muy pequeñas (Teléfonos móviles <= 480px) */
+@media (max-width: 480px) {
+    #titulo {
+        font-size: 18px;
+    }
+
+    .tarjeta-tcg {
+        width: 100%;
+        max-width: 300px; /* Ajuste fluido para cartas en celulares muy pequeños */
+        height: auto;
+        min-height: 440px;
+    }
+}
